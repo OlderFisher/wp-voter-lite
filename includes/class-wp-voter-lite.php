@@ -154,8 +154,14 @@ class Wp_Voter_Lite {
 
 		$plugin_admin = new Wp_Voter_Lite_Admin( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action('init',$plugin_admin,'register_votes_post_type');
-		$this->loader->add_action('admin_menu',$plugin_admin,'add_voter_admin_menu');
+		$this->loader->add_action('init',$plugin_admin,'register_voterlite_post_type');
+		$this->loader->add_action('admin_menu',$plugin_admin,'add_voterlite_admin_menu');
+
+		$this->loader->add_action('contextual_help',$plugin_admin,'display_voterlite_contextual_help',10,3);
+
+		$this->loader->add_action('add_meta_boxes_'.'voterlite',$plugin_admin,'add_voterlite_meta_boxes');
+		$this->loader->add_action('save_post',$plugin_admin,'save_voterlite_vote_post');
+
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 

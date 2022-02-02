@@ -1,4 +1,52 @@
-/**
- * All of the CSS for your admin-specific functionality should be
- * included in this file.
- */
+#alwp_vote_header{
+    margin-top: 15px ;
+    margin-bottom: 15px;
+}
+
+.alwp_vote_settings{
+  display: flex;
+  margin-bottom: 10px ;
+}
+
+.alwp_vote_settings label {
+    display: block;
+    width: 15%;
+    font-weight: 700 ;
+}
+.alwp_vote_settings input {
+    display: block;
+    width: 80%;
+}
+
+.alwp_vote_colors{
+    display: flex;
+}
+.alwp_vote_colors_settings{
+    width: 50% ;
+}
+.alwp_colors_settings label{
+    width:50% ;
+}
+.alwp_vote_colors_display{
+    width:100% ;
+}
+
+.alwp_font_size_px_span{
+    padding-top: 5px ;
+}
+.alwp_voter_colors_widget{
+    width: 80% ;
+    height: auto ;
+    border: 1px solid darkgrey;
+    margin: 20px auto ;
+    padding: 15px 20px ;
+}
+.alwp_vote_answer{
+    display: flex;
+}
+.alwp_vote_bar{
+    width: 70%;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 10px solid blue;
+}
